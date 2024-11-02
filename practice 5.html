@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .center-text {
+            text-align: center;
+            font-size: 50px;
+            color: red;
+        }
+    </style>
+    <script>
+        function validateEmail() {
+            const emailInput = document.getElementById('email');
+            const emailValue = emailInput.value;
+            if (!emailValue.endsWith('@gmail.com')) {
+                alert('Please enter a valid @gmail.com email address.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <img src="https://dypsst.dpu.edu.in/img/bca-banner.jpg" height="200" width="1500">
+    <p class="center-text"><b><u>Registration Form</u></b></p>
+    <form action="#" method="post" enctype="multipart/form-data" onsubmit="return validateEmail()">
+        <!-- Name -->
+        Name: <input type="text" name="name" placeholder="Name"><br><br>
+        <!-- Father's Name -->
+        Father's Name: <input type="text" name="father_name" placeholder="Father's Name"><br><br>
+        <!-- Mother's Name -->
+        Mother's Name: <input type="text" name="mother_name" placeholder="Mother's Name"><br><br>
+        <!-- Phone Number -->
+        Phone Number: <input type="tel" name="phone_number" placeholder="Phone Number"><br><br>
+        <!-- Email -->
+        Email: <input type="email" id="email" name="email" placeholder="Email"><br><br>
+        <!-- Gender -->
+        Gender:
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female<br><br>
+        <!-- Date of Birth -->
+        Date of Birth: <input type="date" name="dob"><br><br>
+        <!-- Password -->
+        Password: <input type="password" name="password" placeholder="Password"><br><br>
+        <!-- Hobbies -->
+        Hobbies:
+        <input type="checkbox" name="hobbies" value="Singing"> Singing
+        <input type="checkbox" name="hobbies" value="Dancing"> Dancing
+        <input type="checkbox" name="hobbies" value="Playing"> Playing
+        <input type="checkbox" name="hobbies" value="Cricket"> Cricket
+        <input type="checkbox" name="hobbies" value="Hockey"> Hockey
+        <input type="checkbox" name="hobbies" value="Badminton"> Badminton
+        <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+        <input type="checkbox" name="hobbies" value="Basketball"> Basketball
+        Other: <input type="text" name="hobbies_other" placeholder="Other"><br><br>
+        <!-- Education Qualification -->
+        Education Qualification:
+        <select name="education_qualification">
+            <option value="">Select Option</option>
+            <option value="None">None</option>
+            <option value="10th">10th</option>
+            <option value="12th">10th+2</option>
+            <option value="Graduation">Graduation</option>
+            <option value="PostGraduation">Post Graduation</option>
+        </select><br><br>
+        <!-- Address -->
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+        <!-- File Upload -->
+        <label for="file">Upload your document:</label>
+        <input type="file" id="file" name="file"><br><br>
+          <!-- "I'm not a robot" verification -->
+          <input type="checkbox" id="robot" name="robot" required>
+          <label for="robot">I'm not a robot</label><br><br>
+        <!-- Submit and Reset Buttons -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
